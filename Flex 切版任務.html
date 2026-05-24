@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #404040;
+        }
+
+        body {
+            color: #404040;
+            background-color: #fff;
+        }
+
+        .container {
+            background-color: transparent;
+            max-width: 1328px;
+            margin: 0 auto;
+            padding: 32px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .sidebar {
+            background-color: #fff;
+            width: 180px;
+            /* 防止被右側壓縮 */
+            flex-shrink: 0; 
+        }
+
+        .item {
+            width: 100%;
+            height: 51px;
+            /* 文字 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .caption {
+            background-color: #24140B;
+        }
+
+        .caption a {
+            color: #ffffff;
+        }
+
+        .article-content-area {
+            flex-grow: 1;
+            max-width: 1076px;
+        }
+
+        .article-list {
+            background-color: #fff;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* 卡片之間的間距 */
+            gap: 24px
+        }
+
+        .card {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* 圖片、文字之間的間距 */
+            gap: 24px;
+            /* 文字 */
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .card-media img {
+            width: 526px;
+            height: 256px;
+            /* object-fit 防止圖片變形 */
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 526px;
+            height: 141px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .card-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-meta-r {
+            display: flex;
+            gap: 8px;
+        }
+
+        .card-views,
+        .card-shares {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .material-symbols-outlined {
+            transform: scale(0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <main class="content">
+            <!-- 左側選單 -->
+            <div class="sidebar">
+                <ul class="list">
+                    <li class="item caption"><a href="#" class="link">全部</a></li>
+                    <li class="item"><a href="#" class="link">品牌設計</a></li>
+                    <li class="item"><a href="#" class="link">平面設計</a></li>
+                    <li class="item"><a href="#" class="link">UIUX 設計</a></li>
+                    <li class="item"><a href="#" class="link">網頁設計</a></li>
+                    <li class="item"><a href="#" class="link">設計規範</a></li>
+                    <li class="item"><a href="#" class="link">前端技術</a></li>
+                    <li class="item"><a href="#" class="link">後端架構</a></li>
+                    <li class="item"><a href="#" class="link">AI 趨勢應用</a></li>
+                </ul>
+            </div>
+
+            <section class="article-content-area">
+                <div class="article-list">
+
+                    <article class="card">
+                        <!-- 圖片 -->
+                        <div class="card-media">
+                            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_1.png?raw=true"
+                                alt="文章封面">
+                        </div>
+                        <!-- 文字 -->
+                        <div class="card-content">
+                            <div class="card-labels">
+                                <span class="label-item">UIUX 設計</span>
+                                <span>．</span>
+                                <span class="label-item">網頁設計</span>
+                                <span>．</span>
+                                <span class="label-item">前端技術</span>
+                            </div>
+                            <p class="card-title">網頁裡的微互動藝術：利用 CSS 與 JS 動畫為諮詢網站注入靈魂並提升用戶轉化率</p>
+                            <div class="card-bottom">
+                                <div class="card-meta-l">
+                                    <span class="card-date">Oct 16, 2022</span>
+                                </div>
+                                <div class="card-meta-r">
+                                    <div class="card-views">
+                                        <span class="material-symbols-outlined">visibility</span>
+                                        110 views
+                                    </div>
+
+                                    <div class="card-shares">
+                                        <span class="material-symbols-outlined">share</span>
+                                        2 shares
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <!-- 圖片 -->
+                        <div class="card-media">
+                            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_2.png?raw=true"
+                                alt="文章封面">
+                        </div>
+                        <!-- 文字 -->
+                        <div class="card-content">
+                            <div class="card-labels">
+                                <span class="label-item">UIUX 設計</span>
+                                <span>．</span>
+                                <span class="label-item">設計規範</span>
+                                <span>．</span>
+                                <span class="label-item">前端技術</span>
+                            </div>
+                            <p class="card-title">10年職人手記：如何運用 Figma 與 Storybook 打造美感與邏輯兼具的企業級設計系統</p>
+                            <div class="card-bottom">
+                                <div class="card-meta-l">
+                                    <span class="card-date">Oct 16, 2022</span>
+                                </div>
+                                <div class="card-meta-r">
+                                    <div class="card-views">
+                                        <span class="material-symbols-outlined">visibility</span>
+                                        110 views
+                                    </div>
+
+                                    <div class="card-shares">
+                                        <span class="material-symbols-outlined">share</span>
+                                        2 shares
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <!-- 圖片 -->
+                        <div class="card-media">
+                            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_3.png?raw=true"
+                                alt="文章封面">
+                        </div>
+                        <!-- 文字 -->
+                        <div class="card-content">
+                            <div class="card-labels">
+                                <span class="label-item">品牌設計</span>
+                                <span>．</span>
+                                <span class="label-item">平面設計</span>
+                                <span>．</span>
+                                <span class="label-item">UIUX 設計</span>
+                            </div>
+                            <p class="card-title">從平面識別到數位體驗：以「植感生活」為例，探討跨媒體品牌視覺在網頁上的精準轉譯</p>
+                            <div class="card-bottom">
+                                <div class="card-meta-l">
+                                    <span class="card-date">Oct 16, 2022</span>
+                                </div>
+                                <div class="card-meta-r">
+                                    <div class="card-views">
+                                        <span class="material-symbols-outlined">visibility</span>
+                                        110 views
+                                    </div>
+
+                                    <div class="card-shares">
+                                        <span class="material-symbols-outlined">share</span>
+                                        2 shares
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <!-- 圖片 -->
+                        <div class="card-media">
+                            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_4.png?raw=true"
+                                alt="文章封面">
+                        </div>
+                        <!-- 文字 -->
+                        <div class="card-content">
+                            <div class="card-labels">
+                                <span class="label-item">UIUX 設計</span>
+                                <span>．</span>
+                                <span class="label-item">前端技術</span>
+                                <span>．</span>
+                                <span class="label-item">AI 趨勢應用</span>
+                            </div>
+                            <p class="card-title">當 AI 遇上介面設計：資深設計師如何利用生成式工具重塑前端開發工作流與視覺想像力</p>
+                            <div class="card-bottom">
+                                <div class="card-meta-l">
+                                    <span class="card-date">Oct 16, 2022</span>
+                                </div>
+                                <div class="card-meta-r">
+                                    <div class="card-views">
+                                        <span class="material-symbols-outlined">visibility</span>
+                                        110 views
+                                    </div>
+
+                                    <div class="card-shares">
+                                        <span class="material-symbols-outlined">share</span>
+                                        2 shares
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <!-- 圖片 -->
+                        <div class="card-media">
+                            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_5.png?raw=true"
+                                alt="文章封面">
+                        </div>
+                        <!-- 文字 -->
+                        <div class="card-content">
+                            <div class="card-labels">
+                                <span class="label-item">前端技術</span>
+                                <span>．</span>
+                                <span class="label-item">後端架構</span>
+                                <span>．</span>
+                                <span class="label-item">AI 趨勢應用</span>
+                            </div>
+                            <p class="card-title">揭開金融 App 的設計密碼：如何優化 Open Bank API 的複雜數據呈現與後端串接安全性</p>
+                            <div class="card-bottom">
+                                <div class="card-meta-l">
+                                    <span class="card-date">Oct 16, 2022</span>
+                                </div>
+                                <div class="card-meta-r">
+                                    <div class="card-views">
+                                        <span class="material-symbols-outlined">visibility</span>
+                                        110 views
+                                    </div>
+
+                                    <div class="card-shares">
+                                        <span class="material-symbols-outlined">share</span>
+                                        2 shares
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+
+                </div>
+            </section>
+
+
+
+        </main>
+    </div>
+</body>
+
+</html>
